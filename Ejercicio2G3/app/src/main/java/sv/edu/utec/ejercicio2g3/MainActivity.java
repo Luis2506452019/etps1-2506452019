@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     //Variables
     EditText numero;
     TextView resultado;
