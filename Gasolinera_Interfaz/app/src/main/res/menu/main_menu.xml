@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:icon="@drawable/inicio_menu"
+            android:title="Inicio"/>
+
+        <item android:id="@+id/estacion"
+            android:icon="@drawable/estacion_menu"
+            android:title="Estaciones"/>
+
+        <item android:id="@+id/ubicacion"
+            android:icon="@drawable/ubicacion_menu"
+            android:title="Ubicaciones"/>
+
+        <item android:id="@+id/horario"
+            android:icon="@drawable/horario_menu"
+            android:title="Horarios"/>
+
+        <item android:id="@+id/oferta"
+            android:icon="@drawable/oferta_menu"
+            android:title="Ofertas"/>
+    </group>
+</menu>

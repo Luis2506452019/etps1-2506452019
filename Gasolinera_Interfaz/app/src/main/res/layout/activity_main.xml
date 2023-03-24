@@ -2,158 +2,352 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/consPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AB55CC"
+    android:background="#333333"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="365dp"
-        android:layout_height="692dp"
-        android:layout_marginStart="24dp"
+        android:id="@+id/linearPrincipal"
+        android:layout_width="367dp"
+        android:layout_height="714dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consArriba"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#DD4242">
+            android:layout_height="58dp"
+            android:background="#333333">
 
             <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="52dp"
+                android:id="@+id/LayoutJustificado"
+                android:layout_width="40dp"
                 android:layout_height="0dp"
                 android:layout_marginBottom="2dp"
-                android:background="#00BCD4"
+                android:background="#333333"
+                android:onClick="mostrarMenu"
+                android:contentDescription="Ver Menu"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0">
+
+                <ImageView
+                    android:id="@+id/imgJustificado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/menu_1"
+                    app:tint="#F1C232" />
+            </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="52dp"
+                android:id="@+id/LayoutUser"
+                android:layout_width="40dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:background="#03A9F4"
+                android:background="#333333"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"></LinearLayout>
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/usuario_menu"
+                    app:tint="#F1C232" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consPantalla"
             android:layout_width="match_parent"
-            android:layout_height="593dp"
-            android:background="#D6AF21">
+            android:layout_height="573dp"
+            android:background="#333333">
 
             <LinearLayout
-                android:id="@+id/linearLayout8"
-                android:layout_width="301dp"
-                android:layout_height="87dp"
-                android:layout_marginTop="28dp"
-                android:background="#6CE91E"
+                android:id="@+id/pantallaOferta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333"
+                android:orientation="horizontal">
+
+                <include layout="@layout/activity_oferta" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pantallaHorario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333"
+                android:orientation="horizontal">
+
+                <include layout="@layout/activity_horario" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pantallaEstacion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333"
+                android:orientation="horizontal">
+
+                <include layout="@layout/activity_estacion" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pantallaUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333"
+                android:orientation="horizontal">
+
+                <include layout="@layout/activity_ubicacion" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pantallaInicio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333"
+                android:orientation="horizontal">
+
+                <include layout="@layout/activity_inicio" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consAbajo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#333333">
+
+            <LinearLayout
+                android:id="@+id/circuloEstacion"
+                android:layout_width="66dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordes_redondos"
+                android:gravity="center|center_horizontal"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
 
             <LinearLayout
-                android:id="@+id/linearLayout9"
-                android:layout_width="301dp"
-                android:layout_height="450dp"
-                android:layout_marginBottom="16dp"
-                android:background="#4CAF50"
+                android:id="@+id/LayoutEstacion"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="14dp"
+                android:onClick="mostrarEstacion"
+                android:contentDescription="Ver Estaciones"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgEstacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/estacion_menu"
+                    app:tint="#F1C232" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/circuloUbicacion"
+                android:layout_width="66dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordes_redondos"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/circuloEstacion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <LinearLayout
+                android:id="@+id/LayoutUbicacion"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="25dp"
+                android:onClick="mostrarUbicacion"
+                android:contentDescription="Ver Ubicaciones"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/LayoutEstacion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imgUbicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ubicacion_menu"
+                    app:tint="#F1C232" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/circuloInicio"
+                android:layout_width="80dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordes_redondos"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/circuloHorario"
+                app:layout_constraintStart_toEndOf="@+id/circuloUbicacion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <LinearLayout
+                android:id="@+id/LayoutInicio"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="mostrarInicio"
+                android:contentDescription="Ver Inicio"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/LayoutHorario"
+                app:layout_constraintStart_toEndOf="@+id/LayoutUbicacion"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5">
+
+                <ImageView
+                    android:id="@+id/imgInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/inicio_menu"
+                    app:tint="#F1C232" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/circuloHorario"
+                android:layout_width="66dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordes_redondos"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/circuloOferta"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <LinearLayout
+                android:id="@+id/LayoutHorario"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:onClick="mostrarHorario"
+                android:contentDescription="Ver Horario"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/LayoutOferta"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/imgHorario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/horario_menu"
+                    app:tint="#F1C232" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/circuloOferta"
+                android:layout_width="66dp"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordes_redondos"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <LinearLayout
+                android:id="@+id/LayoutOferta"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="13dp"
+                android:onClick="mostrarOferta"
+                android:contentDescription="Ver Oferta"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-                app:layout_constraintVertical_bias="1.0"></LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#1A9EAA">
-
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
-                android:layout_marginBottom="2dp"
-                android:background="#E91E63"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0">
 
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:background="#F44336"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
-                app:layout_constraintStart_toEndOf="@+id/linearLayout3"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"></LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:background="#673AB7"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:layout_editor_absoluteX="157dp"></LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout6"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:background="#F44336"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayout7"
-                app:layout_constraintStart_toEndOf="@+id/linearLayout5"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"></LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout7"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:background="#E91E63"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"></LinearLayout>
+                <ImageView
+                    android:id="@+id/imgOferta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/oferta_menu"
+                    app:tint="#F1C232" />
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_volver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="#333333"
+        android:onClick="ocultarMenu"
+        android:visibility="gone"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:visibility="gone"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        tools:ignore="MissingConstraints"></com.google.android.material.navigation.NavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
