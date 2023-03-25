@@ -1,10 +1,14 @@
 package sv.edu.utec.gasolinera_interfaz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -15,29 +19,96 @@ public class MainActivity extends AppCompatActivity {
     //Var Circulo
     LinearLayout cir_inicio, cir_estacion, cir_ubicacion, cir_horario, cir_oferta;
 
+    //Var Menu
     NavigationView navigationView;
-    LinearLayout lin_volver;
+    LinearLayout lin_menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Capturando Pantallas
+        //Pantallas
         lin_inicio = (LinearLayout) findViewById(R.id.pantallaInicio);
         lin_estacion = (LinearLayout) findViewById(R.id.pantallaEstacion);
         lin_ubicacion = (LinearLayout) findViewById(R.id.pantallaUbicacion);
         lin_horario = (LinearLayout) findViewById(R.id.pantallaHorario);
         lin_oferta = (LinearLayout) findViewById(R.id.pantallaOferta);
 
-        //Capturando Circulos
+        //Circulos
         cir_inicio = (LinearLayout) findViewById(R.id.circuloInicio);
         cir_estacion = (LinearLayout) findViewById(R.id.circuloEstacion);
         cir_ubicacion = (LinearLayout) findViewById(R.id.circuloUbicacion);
         cir_horario = (LinearLayout) findViewById(R.id.circuloHorario);
         cir_oferta = (LinearLayout) findViewById(R.id.circuloOferta);
 
+        //Menu
+        lin_menu = findViewById(R.id.lin_volver);
         navigationView = findViewById(R.id.nav_view);
-        lin_volver = (LinearLayout) findViewById(R.id.lin_volver);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.inicio_item:
+                    {
+                        mostrarInicio();
+                        break;
+                    }
+                    case R.id.estacion_item:
+                    {
+                        mostrarEstacion();
+                        break;
+                    }
+                    case R.id.ubicacion_item:
+                    {
+                        mostrarUbicacion();
+                        break;
+                    }
+                    case R.id.horario_item:
+                    {
+                        mostrarHorario();
+                        break;
+                    }
+                    case R.id.oferta_item:
+                    {
+                        mostrarOferta();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
+    }
+
+    //Metodo para ir cambiando entre pantallas
+    public void mostrarDatos(View view){
+        switch (view.getId()){
+            case R.id.LayoutInicio:
+            {
+                mostrarInicio();
+                break;
+            }
+            case R.id.LayoutEstacion:
+            {
+                mostrarEstacion();
+                break;
+            }
+            case R.id.LayoutUbicacion:
+            {
+                mostrarUbicacion();
+                break;
+            }
+            case R.id.LayoutHorario:
+            {
+                mostrarHorario();
+                break;
+            }
+            case R.id.LayoutOferta:
+            {
+                mostrarOferta();
+                break;
+            }
+        }
     }
     public void mostrarInicio() {
         //Inicio
@@ -56,9 +127,11 @@ public class MainActivity extends AppCompatActivity {
 
         lin_oferta.setVisibility(View.GONE);
         cir_oferta.setVisibility(View.INVISIBLE);
-    }
 
-    public void mostrarEstacion(View view) {
+        navigationView.setVisibility(View.INVISIBLE);
+        lin_menu.setVisibility(View.INVISIBLE);
+    }
+    public void mostrarEstacion() {
         //Estacion
         lin_estacion.setVisibility(View.VISIBLE);
         cir_estacion.setVisibility(View.VISIBLE);
@@ -75,9 +148,12 @@ public class MainActivity extends AppCompatActivity {
 
         lin_oferta.setVisibility(View.GONE);
         cir_oferta.setVisibility(View.INVISIBLE);
+
+        navigationView.setVisibility(View.INVISIBLE);
+        lin_menu.setVisibility(View.INVISIBLE);
     }
 
-    public void mostrarUbicacion(View view) {
+    public void mostrarUbicacion() {
         //Ubicacion
         lin_ubicacion.setVisibility(View.VISIBLE);
         cir_ubicacion.setVisibility(View.VISIBLE);
@@ -94,9 +170,12 @@ public class MainActivity extends AppCompatActivity {
 
         lin_oferta.setVisibility(View.GONE);
         cir_oferta.setVisibility(View.INVISIBLE);
+
+        navigationView.setVisibility(View.INVISIBLE);
+        lin_menu.setVisibility(View.INVISIBLE);
     }
 
-    public void mostrarHorario(View view) {
+    public void mostrarHorario() {
         //Horario
         lin_horario.setVisibility(View.VISIBLE);
         cir_horario.setVisibility(View.VISIBLE);
@@ -113,9 +192,12 @@ public class MainActivity extends AppCompatActivity {
 
         lin_oferta.setVisibility(View.GONE);
         cir_oferta.setVisibility(View.INVISIBLE);
+
+        navigationView.setVisibility(View.INVISIBLE);
+        lin_menu.setVisibility(View.INVISIBLE);
     }
 
-    public void mostrarOferta(View view) {
+    public void mostrarOferta() {
         //Oferta
         lin_oferta.setVisibility(View.VISIBLE);
         cir_oferta.setVisibility(View.VISIBLE);
@@ -132,16 +214,20 @@ public class MainActivity extends AppCompatActivity {
 
         lin_horario.setVisibility(View.GONE);
         cir_horario.setVisibility(View.INVISIBLE);
+
+        navigationView.setVisibility(View.INVISIBLE);
+        lin_menu.setVisibility(View.INVISIBLE);
     }
 
     public void mostrarMenu(View view){
         navigationView.setVisibility(View.VISIBLE);
-        lin_volver.setVisibility(View.VISIBLE);
+        lin_menu.setVisibility(View.VISIBLE);
     }
 
     public void ocultarMenu(View view){
-        navigationView.setVisibility(View.GONE);
-        lin_volver.setVisibility(View.INVISIBLE);
+        navigationView.setVisibility(View.INVISIBLE);
+        lin_menu.setVisibility(View.INVISIBLE);
     }
+
 
 }

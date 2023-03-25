@@ -35,8 +35,8 @@
                 android:layout_height="0dp"
                 android:layout_marginBottom="2dp"
                 android:background="#333333"
-                android:onClick="mostrarMenu"
                 android:contentDescription="Ver Menu"
+                android:onClick="mostrarMenu"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +161,7 @@
                 android:layout_width="40dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="14dp"
-                android:onClick="mostrarEstacion"
+                android:onClick="mostrarDatos"
                 android:contentDescription="Ver Estaciones"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -197,7 +197,7 @@
                 android:layout_width="40dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="25dp"
-                android:onClick="mostrarUbicacion"
+                android:onClick="mostrarDatos"
                 android:contentDescription="Ver Ubicaciones"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -235,7 +235,7 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:onClick="mostrarInicio"
+                android:onClick="mostrarDatos"
                 android:contentDescription="Ver Inicio"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -274,7 +274,7 @@
                 android:layout_width="40dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="25dp"
-                android:onClick="mostrarHorario"
+                android:onClick="mostrarDatos"
                 android:contentDescription="Ver Horario"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -310,7 +310,7 @@
                 android:layout_width="40dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="13dp"
-                android:onClick="mostrarOferta"
+                android:onClick="mostrarDatos"
                 android:contentDescription="Ver Oferta"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -337,17 +337,25 @@
         android:alpha="0.5"
         android:background="#333333"
         android:onClick="ocultarMenu"
+        android:orientation="horizontal"
         android:visibility="gone"
-        android:orientation="horizontal">
-    </LinearLayout>
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="8dp"></LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="#333333"
         android:visibility="gone"
         app:headerLayout="@layout/header"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FFFFFF"
         app:menu="@menu/main_menu"
-        tools:ignore="MissingConstraints"></com.google.android.material.navigation.NavigationView>
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="8dp"></com.google.android.material.navigation.NavigationView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
