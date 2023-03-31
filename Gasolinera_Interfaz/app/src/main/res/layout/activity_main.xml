@@ -76,63 +76,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/consPantalla"
             android:layout_width="match_parent"
-            android:layout_height="573dp"
-            android:background="#333333">
+            android:layout_height="573dp">
 
-            <LinearLayout
-                android:id="@+id/pantallaOferta"
+            <FrameLayout
+                android:id="@+id/contenedorFragments"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#333333"
                 android:orientation="horizontal">
-
-                <include layout="@layout/activity_oferta" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/pantallaHorario"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#333333"
-                android:orientation="horizontal">
-
-                <include layout="@layout/activity_horario" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/pantallaEstacion"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#333333"
-                android:orientation="horizontal">
-
-                <include layout="@layout/activity_estacion" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/pantallaUbicacion"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#333333"
-                android:orientation="horizontal">
-
-                <include layout="@layout/activity_ubicacion" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/pantallaInicio"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#333333"
-                android:orientation="horizontal">
-
-                <include layout="@layout/activity_inicio" />
-
-            </LinearLayout>
+            </FrameLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
