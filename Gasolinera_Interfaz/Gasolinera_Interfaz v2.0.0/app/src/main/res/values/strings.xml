@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Gasolineras</string>
+
+    <!-- Menu -->
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_estacion">Estaciones</string>
+    <string name="menu_ubicacion">Ubicaciones</string>
+    <string name="menu_horario">Horarios</string>
+    <string name="menu_oferta">Ofertas</string>
+    <string name="menu_user">Usuario</string>
+
+</resources>

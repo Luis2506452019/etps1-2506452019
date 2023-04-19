@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inicioFragment"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/menu_inicio" />
+
+        <item android:id="@+id/estacionFragment"
+            android:icon="@drawable/baseline_local_gas_station_24"
+            android:title="@string/menu_estacion"/>
+
+        <item android:id="@+id/ubicacionFragment"
+            android:icon="@drawable/baseline_location_on_24"
+            android:title="@string/menu_ubicacion"/>
+
+        <item android:id="@+id/horarioFragment"
+            android:icon="@drawable/baseline_hourglass_full_24"
+            android:title="@string/menu_horario"/>
+
+        <item android:id="@+id/ofertaFragment"
+            android:icon="@drawable/baseline_card_giftcard_24"
+            android:title="@string/menu_oferta"/>
+    </group>
+</menu>
