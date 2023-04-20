@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Parcial3_2506452019</string>
+
+    <!-- string menu bottom -->
+    <string name="home">Inicio</string>
+    <string name="search">Buscar</string>
+    <string name="contacts">Contactos</string>
+    <string name="settings">Ajustes</string>
+
+    <!-- string toolbar -->
+    <string name="edit">Editar</string>
+    <string name="save">Guardar</string>
+    <string name="overflow">Eliminar</string>
+
+</resources>
