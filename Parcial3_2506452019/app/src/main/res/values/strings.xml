@@ -11,5 +11,7 @@
     <string name="edit">Editar</string>
     <string name="save">Guardar</string>
     <string name="overflow">Eliminar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
