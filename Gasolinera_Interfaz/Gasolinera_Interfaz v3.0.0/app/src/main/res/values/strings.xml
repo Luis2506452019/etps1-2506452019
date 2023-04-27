@@ -20,4 +20,9 @@
     <string name="mapaUbicacion"><u>Mapa</u></string>
     <string name="listaUbicacion">Lista</string>
 
+    <!-- ofertas -->
+    <string name="tituloOferta">Gasolineras UNO</string>
+    <string name="obten20">Obten el 20% \n en tu siguiente recarga</string>
+    <string name="registraCupon">REGISTRA TU CUPÓN</string>
+    <string name="masOferta">Más ofertas</string>
 </resources>

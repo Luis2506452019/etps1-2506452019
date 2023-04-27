@@ -5,5 +5,5 @@
     <item android:title="@string/menu_user"
         android:id="@+id/userFragment"
         app:showAsAction="always"
-        android:icon="@drawable/baseline_perm_identity_24"/>
+        android:icon="@drawable/icon_user"/>
 </menu>
