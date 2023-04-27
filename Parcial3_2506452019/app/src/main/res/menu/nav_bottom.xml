@@ -9,6 +9,7 @@
         android:icon="@drawable/baseline_search_24"
         android:title="@string/search"/>
     <item
+        android:id="@+id/flo"
         android:title=""/>
 
     <item
