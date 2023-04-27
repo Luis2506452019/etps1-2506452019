@@ -24,8 +24,7 @@
                 android:layout_height="match_parent"
                 android:text="@string/holaInicio"
                 android:textColor="@color/white"
-                android:textSize="35dp"
-                android:textStyle="bold" />
+                android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/txtBienvenido"
