@@ -9,4 +9,15 @@
     <string name="menu_oferta">Ofertas</string>
     <string name="menu_user">Usuario</string>
 
+    <!-- Inicio -->
+    <string name="holaInicio">¡Hola!</string>
+    <string name="bienvenidoInicio">Bienvenido a tu app de confianza.</string>
+    <string name="fraseInicio">El único modo de hacer un gran trabajo es amar lo que haces.</string>
+    <string name="autorInicio">- Steve Jobs</string>
+
+    <!-- Ubicaciones -->
+    <string name="tituloUbicacion">Nuestras Ubicaciones</string>
+    <string name="mapaUbicacion"><u>Mapa</u></string>
+    <string name="listaUbicacion">Lista</string>
+
 </resources>

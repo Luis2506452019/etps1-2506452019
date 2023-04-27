@@ -7,44 +7,49 @@
     tools:context=".clases.InicioFragment">
 
     <RelativeLayout
+        android:id="@+id/containerInicio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp">
 
         <LinearLayout
-            android:id="@+id/layoutTextoArriba"
+            android:id="@+id/layoutInicioTexto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:orientation="vertical">
+
             <TextView
+                android:id="@+id/txtHola"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="¡Hola!"
+                android:text="@string/holaInicio"
                 android:textColor="@color/white"
                 android:textSize="35dp"
                 android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/txtBienvenido"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Bienvenido a tu app de confianza."
+                android:text="@string/bienvenidoInicio"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutImagenCarroArriba"
+            android:id="@+id/layoutInicioCarro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/layoutTextoArriba"
+            android:layout_alignBottom="@+id/layoutInicioTexto"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:orientation="vertical">
+
             <ImageView
-                android:id="@+id/imageCarroArriba"
+                android:id="@+id/imagenCarroArriba"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/carro_inicio"
@@ -52,10 +57,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutFraseInicio"
+            android:id="@+id/layoutInicioFrase"
             android:layout_width="320dp"
             android:layout_height="120dp"
-            android:layout_below="@+id/layoutTextoArriba"
+            android:layout_below="@+id/layoutInicioTexto"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
@@ -67,10 +72,10 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/layoutText"
+                android:id="@+id/containerInicioFrase"
                 android:layout_width="320dp"
                 android:layout_height="120dp"
-                android:layout_below="@+id/layoutFraseInicio"
+                android:layout_below="@+id/layoutInicioFrase"
                 android:layout_alignParentTop="true"
                 android:layout_margin="50dp"
                 android:layout_marginTop="200dp"
@@ -79,7 +84,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageComillas"
+                    android:id="@+id/imagenComillas"
                     android:layout_width="300dp"
                     android:layout_height="92dp"
                     android:layout_alignParentStart="true"
@@ -93,36 +98,35 @@
                     android:background="@drawable/comillas" />
 
                 <TextView
-                    android:id="@+id/textFrase"
+                    android:id="@+id/txtFrase"
                     android:layout_width="271dp"
                     android:layout_height="52dp"
-                    android:layout_alignTop="@+id/imageComillas"
-                    android:layout_alignEnd="@+id/imageComillas"
+                    android:layout_alignTop="@+id/imagenComillas"
+                    android:layout_alignEnd="@+id/imagenComillas"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="25dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="25dp"
-                    android:text="El único modo de hacer un gran
-trabajo es amar lo que haces."
+                    android:text="@string/fraseInicio"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="17dp" />
 
                 <TextView
-                    android:id="@+id/textFraseAutor"
+                    android:id="@+id/txtAutor"
                     android:layout_width="122dp"
                     android:layout_height="26dp"
-                    android:layout_alignTop="@+id/textFrase"
-                    android:layout_alignEnd="@+id/textFrase"
+                    android:layout_alignTop="@+id/txtFrase"
+                    android:layout_alignEnd="@+id/txtFrase"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="134dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginEnd="23dp"
                     android:layout_marginBottom="10dp"
-                    android:text="- Steve Jobs"
+                    android:text="@string/autorInicio"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
@@ -135,8 +139,6 @@ trabajo es amar lo que haces."
                 android:layout_gravity="center"
                 android:src="@drawable/llenando_carro"
                 android:layout_marginTop="135dp"/>
-
         </LinearLayout>
-
     </RelativeLayout>
 </FrameLayout>
