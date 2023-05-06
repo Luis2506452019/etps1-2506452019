@@ -1,13 +1,422 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".clases.HorarioFragment">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/pan_horario" />
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/txtTituloHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tituloHorario"
+            android:textSize="24dp"/>
+        <TextView
+            android:id="@+id/txtSubTituloHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/subtituloHorario"
+            android:textSize="15dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/backgroundTable_grey"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="@string/headTitle0"
+                    android:gravity="left"
+                    android:padding="10dip"
+                    android:paddingStart="10dp"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borde_head_table_orange"/>
+
+                <ImageView
+                    android:id="@+id/imagenHorarioMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/mapa_horario"
+                    app:tint="@color/iconTable_red" />
+
+            </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:text="@string/headTitle1"
+                        android:gravity="center"
+                        android:padding="4dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle2"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle3"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle4"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle5"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle6"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle7"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+                    <TextView
+                        android:text="@string/headTitle8"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_head_table_grey"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:text="@string/bodyRow1"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/borde_bodyone_table" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodyone_table"
+                        android:src="@drawable/icon_check" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:text="@string/bodyRow1"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/borde_bodytwo_table"/>
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+                    <ImageView
+                        android:gravity="center"
+                        android:padding="8.9dip"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/borde_bodytwo_table"
+                        android:src="@drawable/icon_check" />
+
+                </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:background="@color/backgroundTable_grey">
+
+            <ImageView
+                android:id="@+id/imagenHorarioTelefono"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/telefono_horario"
+                app:tint="@color/iconTable_red" />
+
+            <TextView
+                android:layout_width="182dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="122dp"
+                android:text="@string/telefonoHorario" />
+
+            <ImageView
+                android:id="@+id/imagenHorarioRegalo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/borde_redondeado"
+                android:src="@drawable/regalo_horario"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/imagenHorarioCarro"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/carro_horario"
+                app:tint="@color/iconTable_red" />
+
+            <TextView
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="230dp"
+                android:text="@string/regularHorario" />
+
+            <ImageView
+                android:id="@+id/imagenHorarioCheck1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/icon_check" />
+
+            <TextView
+                android:layout_width="94dp"
+                android:layout_height="31dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="130dp"
+                android:text="@string/especialHorario" />
+
+            <ImageView
+                android:id="@+id/imagenHorarioCheck2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="205dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/icon_check" />
+
+            <TextView
+                android:layout_width="89dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="245dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="40dp"
+                android:text="@string/dieselHorario" />
+
+            <ImageView
+                android:id="@+id/imagenHorarioCheck3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="285dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/icon_check" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/containerHorarioAbajo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/iconArrow_yellow" />
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/iconArrow_yellow" />
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/iconArrow_yellow" />
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/iconArrow_yellow" />
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/iconArrow_yellow" />
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>

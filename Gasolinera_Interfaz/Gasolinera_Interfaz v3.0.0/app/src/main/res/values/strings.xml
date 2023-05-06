@@ -25,4 +25,31 @@
     <string name="obten20">Obten el 20% \n en tu siguiente recarga</string>
     <string name="registraCupon">REGISTRA TU CUPÓN</string>
     <string name="masOferta">Más ofertas</string>
+
+    <!-- Horarios -->
+    <string name="tituloHorario"><font color="@color/white">HORARIOS</font></string>
+    <string name="subtituloHorario"><font color="@color/white">Sucursales</font></string>
+    <string name="telefonoHorario"><font color="@color/white">+(503) 2534 - 5433</font></string>
+    <string name="regularHorario"><font color="@color/white">Regular</font></string>
+    <string name="especialHorario"><font color="@color/white">Especial</font></string>
+    <string name="dieselHorario"><font color="@color/white">Diesel</font></string>
+    <string-array name="gasolinera_array">
+        <item>Gasolinera X</item>
+        <item>Gasolinera UNO</item>
+        <item>Gasolinera PUMA</item>
+        <item>Gasolinera TEXACO</item>
+    </string-array>
+
+    <!-- Horarios Tabla -->
+    <string name="headTitle0"><b><font color="@color/black">Gasolinera</font></b></string>
+    <string name="headTitle1"><font color="@color/black">Hora</font></string>
+    <string name="headTitle2"><font color="@color/black">Lun</font></string>
+    <string name="headTitle3"><font color="@color/black">Mar</font></string>
+    <string name="headTitle4"><font color="@color/black">Mié</font></string>
+    <string name="headTitle5"><font color="@color/black">Jue</font></string>
+    <string name="headTitle6"><font color="@color/black">Vie</font></string>
+    <string name="headTitle7"><font color="@color/black">Sáb</font></string>
+    <string name="headTitle8"><font color="@color/black">Dom</font></string>
+    <string name="bodyRow1"><font color="@color/black">5:00 -\n12:00</font></string>
+    <string name="bodyRow2"><font color="@color/black">1:30 -\n10:00</font></string>
 </resources>
