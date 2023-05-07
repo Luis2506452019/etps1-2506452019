@@ -2,10 +2,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/contenedorFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".clases.EstacionFragment" >
+    tools:context=".clases.EstacionOpcionFragment">
 
     <ListView
         android:id="@+id/ListView_listado"
@@ -23,4 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.836"></ListView>
+
+
 </FrameLayout>

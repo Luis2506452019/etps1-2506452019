@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import sv.edu.utec.gasolinera_interfaz.R;
 public class HorarioFragment extends Fragment {
+    private boolean bandera = false;
 
     public HorarioFragment() {
         // Required empty public constructor
@@ -48,10 +49,10 @@ public class HorarioFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
+                if (!bandera) { bandera = true; return; }
                 Toast.makeText(getActivity(), parent.getSelectedItem().toString(),
                         Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
