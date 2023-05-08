@@ -2,6 +2,7 @@ package sv.edu.utec.gasolinera_interfaz.clases;
 
 import android.os.Bundle;
 
+import androidx.appcompat.view.menu.MenuView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -37,9 +38,9 @@ public class EstacionFragment extends Fragment {
 
         ArrayList<List_entrada> datos = new ArrayList<List_entrada>();
 
-        datos.add(new List_entrada(R.drawable.estacion_puma, "Gasolinera: PUMA","CEO"));
-        datos.add(new List_entrada(R.drawable.estacion_uno, "Gasolinera: UNO", "Asistente"));
-        datos.add(new List_entrada(R.drawable.estacion_texaco, "Gasolinera: TEXACO", "Directora de Marketing"));
+        datos.add(new List_entrada(R.drawable.estacion_puma, "Gasolinera: PUMA"));
+        datos.add(new List_entrada(R.drawable.estacion_uno, "Gasolinera: UNO"));
+        datos.add(new List_entrada(R.drawable.estacion_texaco, "Gasolinera: TEXACO"));
 
         lista = (ListView) vista.findViewById(R.id.ListView_listado);
         lista.setAdapter(new List_adaptador(getActivity(), R.layout.elemento_listview_personalizado, datos){
@@ -50,10 +51,6 @@ public class EstacionFragment extends Fragment {
                     if (texto_superior_entrada != null)
                         texto_superior_entrada.setText(((List_entrada) entrada).get_textoEncima());
 
-                    TextView texto_intermedio_entrada = (TextView) view.findViewById(R.id.textView_inferior);
-                    if (texto_intermedio_entrada != null)
-                        texto_intermedio_entrada.setText(((List_entrada) entrada).get_textoDebajo());
-
                     ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imageView_imagen);
                     if (imagen_entrada != null)
                         imagen_entrada.setImageResource(((List_entrada) entrada).get_idImagen());
@@ -62,8 +59,12 @@ public class EstacionFragment extends Fragment {
         });
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parient, View view, int posicion, long id) {
-                Navigation.findNavController(view).navigate(R.id.estacionOpcionFragment);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                List_entrada test = new List_entrada();
+                test = (List_entrada)lista.getItemAtPosition(position);
+                if (test.get_idImagen()==1){
+                    Navigation.findNavController(view).navigate(R.id.estacionOpcionFragment);
+                }
             }
         });
 

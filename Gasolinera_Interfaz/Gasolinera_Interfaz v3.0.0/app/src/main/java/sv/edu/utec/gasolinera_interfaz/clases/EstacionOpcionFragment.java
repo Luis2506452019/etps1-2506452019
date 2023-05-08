@@ -41,7 +41,7 @@ public class EstacionOpcionFragment extends Fragment {
         datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera: PUMA", "Gasolinera: PUMA, Rubén Darío"));
 
         lista = (ListView) vista.findViewById(R.id.ListView_listado);
-        lista.setAdapter(new List_adaptador(getActivity(), R.layout.elemento_listview_personalizado, datos){
+        lista.setAdapter(new List_adaptador(getActivity(), R.layout.elemento_listview_opcion_personalizado, datos){
             @Override
             public void onEntrada(Object entrada, View view) {
                 if (entrada != null) {
