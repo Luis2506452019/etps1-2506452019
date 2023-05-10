@@ -67,7 +67,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
-            android:background="@drawable/inicio_rectangulo_blanco"
+            android:background="@drawable/rectangulo_blanco_inicio"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -79,7 +79,7 @@
                 android:layout_margin="50dp"
                 android:layout_marginTop="200dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inicio_rectangulo_amarillo"
+                android:background="@drawable/rectangulo_amarillo_inicio"
                 android:orientation="vertical">
 
                 <ImageView

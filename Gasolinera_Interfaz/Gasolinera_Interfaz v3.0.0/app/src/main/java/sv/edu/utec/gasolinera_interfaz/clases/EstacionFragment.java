@@ -1,8 +1,9 @@
 package sv.edu.utec.gasolinera_interfaz.clases;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.os.Bundle;
 
-import androidx.appcompat.view.menu.MenuView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -30,6 +31,7 @@ public class EstacionFragment extends Fragment {
     public EstacionFragment() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,12 +61,11 @@ public class EstacionFragment extends Fragment {
         });
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                List_entrada test = new List_entrada();
-                test = (List_entrada)lista.getItemAtPosition(position);
-                if (test.get_idImagen()==1){
-                    Navigation.findNavController(view).navigate(R.id.estacionOpcionFragment);
-                }
+            public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
+                Bundle datosAEnviar = new Bundle();
+                datosAEnviar.putInt("posicion", posicion);
+
+                Navigation.findNavController(view).navigate(R.id.estacionOpcionFragment, datosAEnviar);
             }
         });
 

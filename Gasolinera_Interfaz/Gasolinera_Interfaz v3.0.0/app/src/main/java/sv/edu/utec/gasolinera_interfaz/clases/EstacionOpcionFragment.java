@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 import sv.edu.utec.gasolinera_interfaz.R;
 import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_adaptador;
+import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada;
 import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada_opciones;
 
 public class EstacionOpcionFragment extends Fragment {
@@ -36,9 +38,26 @@ public class EstacionOpcionFragment extends Fragment {
 
         ArrayList<List_entrada_opciones> datos = new ArrayList<List_entrada_opciones>();
 
-        datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera: PUMA","Gasolinera: PUMA, La Gloria"));
-        datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera: PUMA", "Gasolinera: PUMA, Constitución"));
-        datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera: PUMA", "Gasolinera: PUMA, Rubén Darío"));
+        Bundle datosRecuperados = getArguments();
+        int pos = datosRecuperados.getInt("posicion");
+
+        switch (pos){
+            case 0:
+                datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera:", "PUMA, La Gloria"));
+                datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera:", "PUMA, Constitución"));
+                datos.add(new List_entrada_opciones(R.drawable.estacion_puma, "Gasolinera:", "PUMA, Rubén Darío"));
+                break;
+            case 1:
+                datos.add(new List_entrada_opciones(R.drawable.estacion_uno, "Gasolinera:", "UNO, La Gloria"));
+                datos.add(new List_entrada_opciones(R.drawable.estacion_uno, "Gasolinera:", "UNO, Constitución"));
+                datos.add(new List_entrada_opciones(R.drawable.estacion_uno, "Gasolinera:", "UNO, Rubén Darío"));
+                break;
+            case 2:
+                datos.add(new List_entrada_opciones(R.drawable.estacion_texaco, "Gasolinera:", "TEXACO, La Gloria"));
+                datos.add(new List_entrada_opciones(R.drawable.estacion_texaco, "Gasolinera:", "TEXACO, Constitución"));
+                datos.add(new List_entrada_opciones(R.drawable.estacion_texaco, "Gasolinera:", "TEXACO, Rubén Darío"));
+                break;
+        }
 
         lista = (ListView) vista.findViewById(R.id.ListView_listado);
         lista.setAdapter(new List_adaptador(getActivity(), R.layout.elemento_listview_opcion_personalizado, datos){
@@ -64,8 +83,9 @@ public class EstacionOpcionFragment extends Fragment {
             public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
                 List_entrada_opciones elegido = (List_entrada_opciones) pariente.getItemAtPosition(posicion);
 
-                CharSequence texto = "Seleccionado: " + elegido.get_textoEncima();
-                Toast toast = Toast.makeText(getActivity(), texto, Toast.LENGTH_LONG);
+                CharSequence textOne = elegido.get_textoEncima();
+                CharSequence textTwo = elegido.get_textoDebajo();
+                Toast toast = Toast.makeText(getActivity(), textOne+" "+textTwo, Toast.LENGTH_SHORT);
                 toast.show();
             }
         });

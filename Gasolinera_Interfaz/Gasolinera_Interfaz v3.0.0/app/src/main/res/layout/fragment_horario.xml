@@ -291,7 +291,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="17dp"
-                android:background="@drawable/borde_redondeado"
+                android:background="@drawable/borde_redondeado_gift_table"
                 android:src="@drawable/regalo_horario"
                 app:tint="@color/black" />
 
