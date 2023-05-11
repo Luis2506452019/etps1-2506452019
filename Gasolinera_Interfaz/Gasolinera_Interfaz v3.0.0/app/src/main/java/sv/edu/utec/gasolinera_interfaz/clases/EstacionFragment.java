@@ -1,12 +1,8 @@
 package sv.edu.utec.gasolinera_interfaz.clases;
 
-import static android.app.Activity.RESULT_OK;
-
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -16,14 +12,12 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import sv.edu.utec.gasolinera_interfaz.R;
 import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_adaptador;
 import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada;
-import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada_opciones;
 
 public class EstacionFragment extends Fragment {
     private ListView lista;
@@ -49,11 +43,11 @@ public class EstacionFragment extends Fragment {
             @Override
             public void onEntrada(Object entrada, View view) {
                 if (entrada != null) {
-                    TextView texto_superior_entrada = (TextView) view.findViewById(R.id.textView_superior);
+                    TextView texto_superior_entrada = (TextView) view.findViewById(R.id.txtTituloGasolineraList);
                     if (texto_superior_entrada != null)
                         texto_superior_entrada.setText(((List_entrada) entrada).get_textoEncima());
 
-                    ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imageView_imagen);
+                    ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imagenEstacionList);
                     if (imagen_entrada != null)
                         imagen_entrada.setImageResource(((List_entrada) entrada).get_idImagen());
                 }

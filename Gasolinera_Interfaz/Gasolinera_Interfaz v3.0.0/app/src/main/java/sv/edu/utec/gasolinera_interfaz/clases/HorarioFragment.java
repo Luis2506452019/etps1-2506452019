@@ -35,7 +35,7 @@ public class HorarioFragment extends Fragment {
         // Personalizacion del Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.gasolinera_array, R.layout.elemento_spinner_personalizado);
-        adapter.setDropDownViewResource( R.layout.elemento_lista_spinner_personalizado);
+        adapter.setDropDownViewResource( R.layout.elemento_spinner_lista_personalizado);
 
         // Llenando Spinner
         spin1.setAdapter(adapter);

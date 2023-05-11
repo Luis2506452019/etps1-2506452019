@@ -1,28 +1,27 @@
 package sv.edu.utec.gasolinera_interfaz.clases;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import sv.edu.utec.gasolinera_interfaz.R;
 import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_adaptador;
-import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada;
 import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada_opciones;
 
-public class EstacionOpcionFragment extends Fragment {
+public class EstacionOpcionFragment extends Fragment implements Serializable {
 
     private ListView lista;
 
@@ -64,15 +63,15 @@ public class EstacionOpcionFragment extends Fragment {
             @Override
             public void onEntrada(Object entrada, View view) {
                 if (entrada != null) {
-                    TextView texto_superior_entrada = (TextView) view.findViewById(R.id.textView_superior);
+                    TextView texto_superior_entrada = (TextView) view.findViewById(R.id.txtTituloGasolineraOpcion);
                     if (texto_superior_entrada != null)
                         texto_superior_entrada.setText(((List_entrada_opciones) entrada).get_textoEncima());
 
-                    TextView texto_intermedio_entrada = (TextView) view.findViewById(R.id.textView_inferior);
+                    TextView texto_intermedio_entrada = (TextView) view.findViewById(R.id.txtNombreGasolineraOpcion);
                     if (texto_intermedio_entrada != null)
                         texto_intermedio_entrada.setText(((List_entrada_opciones) entrada).get_textoDebajo());
 
-                    ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imageView_imagen);
+                    ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imagenEstacionOpcion);
                     if (imagen_entrada != null)
                         imagen_entrada.setImageResource(((List_entrada_opciones) entrada).get_idImagen());
                 }
@@ -81,12 +80,13 @@ public class EstacionOpcionFragment extends Fragment {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
-                List_entrada_opciones elegido = (List_entrada_opciones) pariente.getItemAtPosition(posicion);
+                String com = datos.get(posicion).get_textoEncima() +" "+datos.get(posicion).get_textoDebajo();
+                Bundle datosAEnviar = new Bundle();
+                //datosAEnviar.putInt("pos", posicion);
+                datosAEnviar.putString("nom", com);
+                datosAEnviar.putInt("img", datos.get(posicion).get_idImagen());
 
-                CharSequence textOne = elegido.get_textoEncima();
-                CharSequence textTwo = elegido.get_textoDebajo();
-                Toast toast = Toast.makeText(getActivity(), textOne+" "+textTwo, Toast.LENGTH_SHORT);
-                toast.show();
+                Navigation.findNavController(view).navigate(R.id.estacionDetalleFragment, datosAEnviar);
             }
         });
 

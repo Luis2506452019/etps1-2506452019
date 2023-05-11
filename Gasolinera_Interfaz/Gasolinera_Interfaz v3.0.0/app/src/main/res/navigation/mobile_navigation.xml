@@ -38,5 +38,14 @@
         android:id="@+id/estacionOpcionFragment"
         android:name="sv.edu.utec.gasolinera_interfaz.clases.EstacionOpcionFragment"
         android:label="fragment_estacion_opcion"
-        tools:layout="@layout/fragment_estacion_opcion" />
+        tools:layout="@layout/fragment_estacion_opcion" >
+        <action
+            android:id="@+id/action_estacionOpcionFragment_to_estacionDetalleFragment"
+            app:destination="@id/estacionDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/estacionDetalleFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.EstacionDetalleFragment"
+        android:label="fragment_estacion_detalle"
+        tools:layout="@layout/fragment_estacion_detalle" />
 </navigation>
