@@ -20,6 +20,16 @@
     <string name="fraseInicio">El único modo de hacer un gran trabajo es amar lo que haces.</string>
     <string name="autorInicio">- Steve Jobs</string>
 
+    <!-- Estacion -->
+    <string name="nomEstacion">Nombre Gasolinera</string>
+    <string name="nomUbiEstacion">Ubicación:</string>
+    <string name="ubiEstacion">Ubicacion Gasolinera</string>
+    <string name="tipEstacion">Tipo:</string>
+    <string name="preEstacion">Precio:</string>
+    <string name="diEstacion">Diesel</string>
+    <string name="reEstacion">Regular</string>
+    <string name="esEstacion">Especial</string>
+
     <!-- Ubicaciones -->
     <string name="tituloUbicacion"><b>Nuestras Ubicaciones</b></string>
     <string name="mapaUbicacion"><b><u>Mapa</u></b></string>
@@ -57,6 +67,4 @@
     <string name="headTitle8"><font color="@color/black">Dom</font></string>
     <string name="bodyRow1"><font color="@color/black">5:00 -\n12:00</font></string>
     <string name="bodyRow2"><font color="@color/black">1:30 -\n10:00</font></string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

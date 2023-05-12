@@ -2,17 +2,23 @@ package sv.edu.utec.gasolinera_interfaz.clases.list_clases;
 
 public class List_entrada {
     private int idImagen;
-    private String textoEncima;
+    private String txtGasolinera, txtNombreGasolinera;
 
-    public List_entrada (int idImagen, String textoEncima) {
+    public List_entrada (int idImagen, String txtGasolinera, String txtNombreGasolinera) {
         this.idImagen = idImagen;
-        this.textoEncima = textoEncima;
+        this.txtGasolinera = txtGasolinera;
+        this.txtNombreGasolinera = txtNombreGasolinera;
     }
-    public String get_textoEncima() {
-        return textoEncima;
+
+    public String get_txtGasolinera() {
+        return txtGasolinera;
     }
+
+    public String get_txtNombreGasolinera() { return txtNombreGasolinera; }
+
     public int get_idImagen() {
         return idImagen;
     }
 }
+
 

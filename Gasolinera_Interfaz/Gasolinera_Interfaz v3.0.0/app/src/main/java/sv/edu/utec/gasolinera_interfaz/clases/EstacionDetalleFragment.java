@@ -10,11 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import sv.edu.utec.gasolinera_interfaz.R;
-import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada_detalle;
-import sv.edu.utec.gasolinera_interfaz.clases.list_clases.List_entrada_opciones;
 
 public class EstacionDetalleFragment extends Fragment {
     public EstacionDetalleFragment() {
@@ -27,24 +23,27 @@ public class EstacionDetalleFragment extends Fragment {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_estacion_detalle, container, false);
 
-        TextView textView = vista.findViewById(R.id.tituloGasolineraEstacion);
-        ImageView imageView = vista.findViewById(R.id.imagenListEstacion);
-
-        ArrayList<List_entrada_detalle> datos = new ArrayList<List_entrada_detalle>();
+        TextView txtGasolineraEstacion = vista.findViewById(R.id.tituloDetalleEstacion);
+        ImageView imgListEstacion = vista.findViewById(R.id.imagenDetalleEstacion);
+        TextView txtUbicacionEstacion = vista.findViewById(R.id.ubicacionDetalleEstacion);
+        TextView txtPrecioEstacion1 = vista.findViewById(R.id.precioEstacion1);
+        TextView txtPrecioEstacion2 = vista.findViewById(R.id.precioEstacion2);
+        TextView txtPrecioEstacion3 = vista.findViewById(R.id.precioEstacion3);
 
         Bundle datosRecuperados = getArguments();
-        //int pos = datosRecuperados.getInt("pos");
-        String nom = datosRecuperados.getString("nom");
-        int img = datosRecuperados.getInt("img");
+        int imgGasolinera = datosRecuperados.getInt("imgGasolinera");
+        String nomGasolinera = datosRecuperados.getString("nombreGasolineraSucursal");
+        String ubiGasolinera = datosRecuperados.getString("ubicacionGasolinera");
+        String precioDiesel = datosRecuperados.getString("precioDiesel");
+        String precioRegular = datosRecuperados.getString("precioRegular");
+        String precioEspecial = datosRecuperados.getString("precioEspecial");
 
-        /*switch (pos){
-            case 0:
-                textView.setText(nom);
-                break;
-        }*/
-
-        textView.setText(nom);
-        imageView.setImageResource(img);
+        txtGasolineraEstacion.setText(nomGasolinera);
+        imgListEstacion.setImageResource(imgGasolinera);
+        txtUbicacionEstacion.setText(ubiGasolinera);
+        txtPrecioEstacion1.setText(precioDiesel);
+        txtPrecioEstacion2.setText(precioRegular);
+        txtPrecioEstacion3.setText(precioEspecial);
 
         return vista;
     }

@@ -34,9 +34,9 @@ public class EstacionFragment extends Fragment {
 
         ArrayList<List_entrada> datos = new ArrayList<List_entrada>();
 
-        datos.add(new List_entrada(R.drawable.estacion_puma, "Gasolinera: PUMA"));
-        datos.add(new List_entrada(R.drawable.estacion_uno, "Gasolinera: UNO"));
-        datos.add(new List_entrada(R.drawable.estacion_texaco, "Gasolinera: TEXACO"));
+        datos.add(new List_entrada(R.drawable.estacion_puma, "Gasolinera:", "PUMA"));
+        datos.add(new List_entrada(R.drawable.estacion_uno, "Gasolinera:", "UNO"));
+        datos.add(new List_entrada(R.drawable.estacion_texaco, "Gasolinera:", "TEXACO"));
 
         lista = (ListView) vista.findViewById(R.id.ListView_listado);
         lista.setAdapter(new List_adaptador(getActivity(), R.layout.elemento_listview_personalizado, datos){
@@ -45,7 +45,7 @@ public class EstacionFragment extends Fragment {
                 if (entrada != null) {
                     TextView texto_superior_entrada = (TextView) view.findViewById(R.id.txtTituloGasolineraList);
                     if (texto_superior_entrada != null)
-                        texto_superior_entrada.setText(((List_entrada) entrada).get_textoEncima());
+                        texto_superior_entrada.setText(((List_entrada) entrada).get_txtGasolinera()+" "+((List_entrada) entrada).get_txtNombreGasolinera());
 
                     ImageView imagen_entrada = (ImageView) view.findViewById(R.id.imagenEstacionList);
                     if (imagen_entrada != null)
@@ -57,7 +57,10 @@ public class EstacionFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
                 Bundle datosAEnviar = new Bundle();
-                datosAEnviar.putInt("posicion", posicion);
+                datosAEnviar.putInt("posEstacion", posicion);
+                datosAEnviar.putString("textGasolinera", datos.get(posicion).get_txtGasolinera());
+                datosAEnviar.putString("nomGasolinera", datos.get(posicion).get_txtNombreGasolinera());
+                datosAEnviar.putInt("imgGasolinera", datos.get(posicion).get_idImagen());
 
                 Navigation.findNavController(view).navigate(R.id.estacionOpcionFragment, datosAEnviar);
             }
