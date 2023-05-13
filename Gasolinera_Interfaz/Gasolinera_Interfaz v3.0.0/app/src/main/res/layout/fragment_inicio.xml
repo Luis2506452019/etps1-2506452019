@@ -7,13 +7,12 @@
     tools:context=".clases.InicioFragment">
 
     <RelativeLayout
-        android:id="@+id/containerOferta"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp">
 
         <LinearLayout
-            android:id="@+id/layoutOfertaEncabezado"
+            android:id="@+id/layoutInicioEncabezado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -36,74 +35,54 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutOfertaTextoBoton"
+            android:id="@+id/layoutInicioCarro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/layoutOfertaEncabezado"
+            android:layout_alignBottom="@+id/layoutInicioEncabezado"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imagenCarroArriba"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@drawable/carro_inicio"
                 app:tint="@color/sky_blue" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layoutMasOferta"
-            android:layout_width="320dp"
-            android:layout_height="120dp"
-            android:layout_below="@+id/layoutOfertaEncabezado"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
+            android:id="@+id/layoutInicioContenedor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutInicioEncabezado"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
             android:background="@drawable/rectangulo_blanco_inicio"
             android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/containerInicioFrase"
-                android:layout_width="320dp"
+                android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_below="@+id/layoutMasOferta"
-                android:layout_alignParentTop="true"
-                android:layout_margin="50dp"
-                android:layout_marginTop="200dp"
+                android:layout_below="@+id/layoutInicioContenedor"
                 android:layout_gravity="center"
+                android:layout_margin="30dp"
                 android:background="@drawable/rectangulo_amarillo_inicio"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imagenComillas"
-                    android:layout_width="300dp"
-                    android:layout_height="92dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
                     android:background="@drawable/comillas" />
 
                 <TextView
                     android:id="@+id/txtFrase"
-                    android:layout_width="271dp"
-                    android:layout_height="52dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/imagenComillas"
-                    android:layout_alignEnd="@+id/imagenComillas"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
+                    android:layout_alignBottom="@+id/imagenComillas"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="25dp"
                     android:layout_marginEnd="20dp"
@@ -115,29 +94,32 @@
 
                 <TextView
                     android:id="@+id/txtAutor"
-                    android:layout_width="122dp"
-                    android:layout_height="26dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/txtFrase"
                     android:layout_alignEnd="@+id/txtFrase"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="134dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginEnd="23dp"
                     android:layout_marginBottom="10dp"
                     android:text="@string/autorInicio"
-                    android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
             </RelativeLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="30dp">
+
             <ImageView
                 android:id="@+id/imagenIconPuma"
-                android:layout_width="320dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:src="@drawable/llenando_carro"
-                android:layout_marginTop="135dp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@drawable/llenando_carro" />
+            </LinearLayout>
+
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>

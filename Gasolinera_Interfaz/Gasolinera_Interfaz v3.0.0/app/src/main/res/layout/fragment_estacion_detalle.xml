@@ -61,14 +61,15 @@
             android:textSize="15dp"/>
 
         <TableLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp">
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:gravity="center">
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center">
 
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
                 <TextView
                     android:text="@string/tipEstacion"
                     android:gravity="center"
@@ -88,11 +89,11 @@
                     android:textStyle="bold"
                     android:textSize="18dp"/>
             </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:gravity="center">
 
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
                 <TextView
                     android:text="@string/diEstacion"
                     android:gravity="center"
@@ -101,7 +102,6 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="15dp"/>
-
                 <TextView
                     android:id="@+id/precioEstacion1"
                     android:layout_width="wrap_content"
@@ -112,11 +112,11 @@
                     android:textColor="@color/black"
                     android:textSize="15dp"/>
             </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:gravity="center">
 
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
                 <TextView
                     android:text="@string/reEstacion"
                     android:gravity="center"
@@ -125,7 +125,6 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="15dp"/>
-
                 <TextView
                     android:id="@+id/precioEstacion2"
                     android:layout_width="wrap_content"
@@ -136,11 +135,11 @@
                     android:textColor="@color/black"
                     android:textSize="15dp"/>
             </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:gravity="center">
 
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
                 <TextView
                     android:text="@string/esEstacion"
                     android:gravity="center"
@@ -149,7 +148,6 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="15dp"/>
-
                 <TextView
                     android:id="@+id/precioEstacion3"
                     android:layout_width="wrap_content"
@@ -160,6 +158,7 @@
                     android:textColor="@color/black"
                     android:textSize="15dp"/>
             </TableRow>
+
         </TableLayout>
     </LinearLayout>
 
