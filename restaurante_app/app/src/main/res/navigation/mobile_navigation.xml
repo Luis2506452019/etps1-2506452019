@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="sv.edu.utec.restaurante_app.clases.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidoFragment"
+        android:name="sv.edu.utec.restaurante_app.clases.PedidoFragment"
+        android:label="fragment_pedido"
+        tools:layout="@layout/fragment_pedido" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="sv.edu.utec.restaurante_app.clases.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="sv.edu.utec.restaurante_app.clases.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" />
+</navigation>

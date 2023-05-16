@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="piel">#F4E2BC</color>
+    <color name="fondo_piel">#F5EBDC</color>
+    <color name="cafe">#77282B</color>
+    <color name="verde">#A0C06B</color>
+    <color name="anaranjado">#EE9B69</color>
+</resources>

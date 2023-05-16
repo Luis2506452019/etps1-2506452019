@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Restaurante_app" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/piel</item>
+        <item name="colorPrimaryVariant">@color/cafe</item>
+        <item name="colorOnPrimary">@color/verde</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/piel</item>
+        <item name="colorSecondaryVariant">@color/cafe</item>
+        <item name="colorOnSecondary">@color/verde</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/cafe</item>
+        <item name="android:navigationBarColor">@color/piel</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/cafe</item>
+    </style>
+</resources>

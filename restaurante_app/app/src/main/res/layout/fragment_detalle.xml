@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clases.DetalleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:background="@color/fondo_piel">
+
+        <TextView
+            android:id="@+id/nomComida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Nombre Comida"
+            android:textColor="@color/cafe"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" />
+
+        <ImageView
+            android:id="@+id/imgComi"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="220dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:contentDescription="Descripción del contenido de la imagen"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CANTIDAD"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:textColor="@color/anaranjado"
+                android:textSize="15dp"  />
+
+             <TableRow
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1">
+
+                 <ImageButton
+                     android:id="@+id/disminuir"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/icon_disminuir"
+                     android:gravity="start"
+                     android:layout_marginStart="10dp"
+                     android:backgroundTint="@color/cafe"
+                     app:tint="@color/piel" />
+
+                 <TextView
+                     android:id="@+id/txtnumero"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="1"
+                     android:textAlignment="center"
+                     android:layout_gravity="center"
+                     android:textColor="@color/anaranjado"
+                     android:textSize="15dp"  />
+
+                 <ImageButton
+                     android:id="@+id/aumentar"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/icon_aumentar"
+                     android:layout_marginEnd="10dp"
+                     android:gravity="end"
+                     android:backgroundTint="@color/cafe"
+                     app:tint="@color/piel" />
+
+             </TableRow>
+
+
+            <TextView
+                android:id="@+id/preComida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="$17.00"
+                android:gravity="end"
+                android:textColor="@color/verde"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:textSize="15dp" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Agregar al carrito"
+            android:drawableLeft="@drawable/icon_carrito"
+            android:drawableTint="@color/piel"
+            android:textColor="@color/piel"
+            android:textStyle="bold"
+            android:backgroundTint="@color/verde"/>
+    </LinearLayout>
+
+
+</FrameLayout>

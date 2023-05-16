@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp">
-
         <TextView
             android:id="@+id/txtTituloHorario"
             android:layout_width="match_parent"
@@ -256,119 +255,80 @@
                 </TableRow>
         </TableLayout>
 
-        <RelativeLayout
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="108dp"
+            android:layout_height="200dp"
             android:background="@color/backgroundTable_grey">
-
-            <ImageView
-                android:id="@+id/imagenHorarioTelefono"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/telefono_horario"
-                app:tint="@color/iconTable_red" />
-
-            <TextView
-                android:layout_width="182dp"
-                android:layout_height="36dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="122dp"
-                android:text="@string/telefonoHorario" />
-
-            <ImageView
-                android:id="@+id/imagenHorarioRegalo"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="17dp"
-                android:background="@drawable/borde_redondeado_gift_table"
-                android:src="@drawable/regalo_horario"
-                app:tint="@color/black" />
-
-            <ImageView
-                android:id="@+id/imagenHorarioCarro"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="45dp"
-                android:src="@drawable/carro_horario"
-                app:tint="@color/iconTable_red" />
-
-            <TextView
-                android:layout_width="94dp"
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imagenHorarioTelefono"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/telefono_horario"
+                    app:tint="@color/iconTable_red" />
+                <TextView
+                    android:layout_width="182dp"
+                    android:layout_height="36dp"
+                    android:text="@string/telefonoHorario"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <ImageView
+                    android:id="@+id/imagenHorarioRegalo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/borde_redondeado_gift_table"
+                    android:src="@drawable/regalo_horario"
+                    app:tint="@color/black" />
+            </TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="230dp"
-                android:text="@string/regularHorario" />
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imagenHorarioCarro"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/carro_horario"
+                    app:tint="@color/iconTable_red" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regularHorario" />
 
-            <ImageView
-                android:id="@+id/imagenHorarioCheck1"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="110dp"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/icon_check" />
+                <ImageView
+                    android:id="@+id/imagenHorarioCheck1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_check" />
 
-            <TextView
-                android:layout_width="94dp"
-                android:layout_height="31dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="150dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="130dp"
-                android:text="@string/especialHorario" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:text="@string/especialHorario" />
 
-            <ImageView
-                android:id="@+id/imagenHorarioCheck2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="205dp"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/icon_check" />
+                <ImageView
+                    android:id="@+id/imagenHorarioCheck2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_check" />
 
-            <TextView
-                android:layout_width="89dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="245dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="40dp"
-                android:text="@string/dieselHorario" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dieselHorario" />
 
-            <ImageView
-                android:id="@+id/imagenHorarioCheck3"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="285dp"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/icon_check" />
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/imagenHorarioCheck3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_check" />
+            </LinearLayout>
+        </TableLayout>
 
         <LinearLayout
             android:id="@+id/containerHorarioAbajo"
@@ -377,45 +337,14 @@
             android:layout_height="match_parent">
 
             <Spinner
-                android:id="@+id/spinner1"
+                android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/iconArrow_yellow" />
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/iconArrow_yellow" />
-            <Spinner
-                android:id="@+id/spinner3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/iconArrow_yellow" />
-            <Spinner
-                android:id="@+id/spinner4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/iconArrow_yellow" />
-            <Spinner
-                android:id="@+id/spinner5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/iconArrow_yellow" />
+
         </LinearLayout>
 
     </LinearLayout>
