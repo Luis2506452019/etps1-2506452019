@@ -3,15 +3,10 @@ package sv.edu.utec.restaurante_app;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -23,45 +18,13 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.List;
-
-import sv.edu.utec.restaurante_app.database.Entity.Producto;
-import sv.edu.utec.restaurante_app.database.Repository.ProductoAdapter;
-import sv.edu.utec.restaurante_app.database.Repository.ProductoViewModel;
-
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
-    private ProductoViewModel productoViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Obtener un identificador de RecyclerView.
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.listado);
-        //Creemos un adaptador para proporcionar los datos que se mostrarán.
-        final ProductoAdapter adapter = new ProductoAdapter();
-        recyclerView.setHasFixedSize(true);
-
-        // Decoracion RecyclerView (Division)
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
-        recyclerView.addItemDecoration(dividerItemDecoration);
-
-        //Conectamos el adaptador con el RecyclerView
-        recyclerView.setAdapter(adapter);
-
-        // Damos al RecyclerView un administrador de diseño predeterminado.
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        productoViewModel = new ViewModelProvider(this).get(ProductoViewModel.class);
-        productoViewModel.getAllProductos().observe(this, new Observer<List<Producto>>() {
-            @Override
-            public void onChanged(List<Producto> productos) {
-                adapter.setProductos(productos);
-            }
-        });
-
-        //Apartado de Toolbar y Navegación
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
