@@ -11,20 +11,23 @@ public class MD_Cliente extends BaseHelper {
 
     public MD_Cliente(@Nullable Context context) {
         super(context);
+        this.context = context;
     }
 
-    public long insertCliente(String sMatricula, String iKilometro){
+    public long insertCliente(String sNombreCliente, String sApellidoCliente, String sDireccionCliente, String sCiudadCliente){
         long codigo = 0;
 
         try {
             BaseHelper baseHelp = new BaseHelper(context);
             SQLiteDatabase bd = baseHelp.getWritableDatabase();
 
-            ContentValues vDetalle = new ContentValues();
-            vDetalle.put("sMatricula", sMatricula);
-            vDetalle.put("iKilometros", iKilometro);
+            ContentValues vCliente = new ContentValues();
+            vCliente.put("sNombreCliente", sNombreCliente);
+            vCliente.put("sApellidoCliente", sApellidoCliente);
+            vCliente.put("sDireccionCliente", sDireccionCliente);
+            vCliente.put("sCiudadCliente", sCiudadCliente);
 
-            codigo= bd.insert(NOMBRE_TABLClVh, null, vDetalle);
+            codigo= bd.insert(NOMBRE_TABLAcl, null, vCliente);
             return codigo;
         }
         catch (Exception ex){
