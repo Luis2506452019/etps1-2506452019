@@ -48,4 +48,9 @@
         android:name="sv.edu.utec.gasolinera_interfaz.clases.EstacionDetalleFragment"
         android:label="fragment_estacion_detalle"
         tools:layout="@layout/fragment_estacion_detalle" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>

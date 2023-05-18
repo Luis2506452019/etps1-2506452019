@@ -16,6 +16,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.userFragment) {
-            Toast.makeText(this, "Se presionó el ícono de usuario", Toast.LENGTH_LONG).show();
+
             return true;
         }     return super.onOptionsItemSelected(item);
     }

@@ -67,4 +67,6 @@
     <string name="headTitle8"><font color="@color/black">Dom</font></string>
     <string name="bodyRow1"><font color="@color/black">5:00 -\n12:00</font></string>
     <string name="bodyRow2"><font color="@color/black">1:30 -\n10:00</font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

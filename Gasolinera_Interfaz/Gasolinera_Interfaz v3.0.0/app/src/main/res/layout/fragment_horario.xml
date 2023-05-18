@@ -27,27 +27,24 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:background="@color/backgroundTable_grey"
-            android:gravity="center">
+            android:gravity="center"
+            android:stretchColumns="*"
+            android:shrinkColumns="*">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp">
-
+                android:layout_margin="10dp">
                 <TextView
                     android:text="@string/headTitle0"
                     android:gravity="left"
                     android:padding="10dip"
-                    android:paddingStart="10dp"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/borde_head_table_orange"/>
-
                 <ImageView
                     android:id="@+id/imagenHorarioMapa"
                     android:layout_width="match_parent"
@@ -56,134 +53,134 @@
                     android:scaleType="fitEnd"
                     android:src="@drawable/mapa_horario"
                     app:tint="@color/iconTable_red" />
-
             </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp">
 
                     <TextView
                         android:text="@string/headTitle1"
                         android:gravity="center"
-                        android:padding="4dip"
                         android:layout_width="0dp"
                         android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:textSize="12dp"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle2"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle3"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle4"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle5"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle6"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle7"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
                     <TextView
                         android:text="@string/headTitle8"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_head_table_grey"/>
 
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp">
 
                     <TextView
                         android:text="@string/bodyRow1"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="2"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_bodyone_table" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodyone_table"
                         android:src="@drawable/icon_check" />
 
@@ -191,77 +188,82 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp">
 
                     <TextView
                         android:text="@string/bodyRow1"
                         android:gravity="center"
-                        android:padding="3dip"
                         android:layout_width="0dp"
                         android:layout_weight="2"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_bodytwo_table"/>
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
                     <ImageView
                         android:gravity="center"
-                        android:padding="8.9dip"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_height="match_parent"
                         android:background="@drawable/borde_bodytwo_table"
                         android:src="@drawable/icon_check" />
-
                 </TableRow>
         </TableLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:background="@color/backgroundTable_grey">
-            <TableRow
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
                 <ImageView
                     android:id="@+id/imagenHorarioTelefono"
                     android:layout_width="50dp"
@@ -269,26 +271,32 @@
                     android:src="@drawable/telefono_horario"
                     app:tint="@color/iconTable_red" />
                 <TextView
-                    android:layout_width="182dp"
-                    android:layout_height="36dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/telefonoHorario"
-                    android:gravity="center"
-                    android:layout_gravity="center"/>
-                <ImageView
-                    android:id="@+id/imagenHorarioRegalo"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="left"
-                    android:background="@drawable/borde_redondeado_gift_table"
-                    android:src="@drawable/regalo_horario"
-                    app:tint="@color/black" />
-            </TableRow>
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:textSize="14dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/imagenHorarioRegalo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/borde_redondeado_gift_table"
+                        android:src="@drawable/regalo_horario"
+                        app:tint="@color/black" />
+                </RelativeLayout>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
                 <ImageView
                     android:id="@+id/imagenHorarioCarro"
                     android:layout_width="60dp"
@@ -298,37 +306,49 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:textSize="14dp"
                     android:text="@string/regularHorario" />
 
                 <ImageView
                     android:id="@+id/imagenHorarioCheck1"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/icon_check" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:textSize="14dp"
                     android:text="@string/especialHorario" />
 
                 <ImageView
                     android:id="@+id/imagenHorarioCheck2"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/icon_check" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:textSize="14dp"
                     android:text="@string/dieselHorario" />
 
                 <ImageView
                     android:id="@+id/imagenHorarioCheck3"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/icon_check" />
             </LinearLayout>
-        </TableLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/containerHorarioAbajo"
