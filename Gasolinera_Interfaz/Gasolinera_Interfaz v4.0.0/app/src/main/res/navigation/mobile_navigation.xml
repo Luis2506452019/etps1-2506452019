@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/estacionFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.EstacionFragment"
+        android:label="@string/menu_estacion"
+        tools:layout="@layout/fragment_estacion" >
+        <action
+            android:id="@+id/action_estacionFragment_to_estacionOpcionFragment"
+            app:destination="@id/estacionOpcionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ubicacionFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.UbicacionFragment"
+        android:label="@string/menu_ubicacion"
+        tools:layout="@layout/fragment_ubicacion" />
+    <fragment
+        android:id="@+id/horarioFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.HorarioFragment"
+        android:label="@string/menu_horario"
+        tools:layout="@layout/fragment_horario" />
+    <fragment
+        android:id="@+id/ofertaFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.OfertaFragment"
+        android:label="@string/menu_oferta"
+        tools:layout="@layout/fragment_oferta" />
+    <fragment
+        android:id="@+id/estacionOpcionFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.EstacionOpcionFragment"
+        android:label="fragment_estacion_opcion"
+        tools:layout="@layout/fragment_estacion_opcion" >
+        <action
+            android:id="@+id/action_estacionOpcionFragment_to_estacionDetalleFragment"
+            app:destination="@id/estacionDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/estacionDetalleFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.EstacionDetalleFragment"
+        android:label="fragment_estacion_detalle"
+        tools:layout="@layout/fragment_estacion_detalle" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrarseFragment"
+            app:destination="@id/registrarseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrarseFragment"
+        android:name="sv.edu.utec.gasolinera_interfaz.clases.RegistrarseFragment"
+        android:label="fragment_registrarse"
+        tools:layout="@layout/fragment_registrarse" >
+        <action
+            android:id="@+id/action_registrarseFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#F1C232</color>
+    <color name="status_grey">#525252</color>
+    <color name="background_grey">#333333</color>
+    <color name="sky_blue">#9FC5F8</color>
+    <color name="headTable_grey">#CCCCCC</color>
+    <color name="bodyOne_yellow">#FFE599</color>
+    <color name="backgroundTable_grey">#999999</color>
+    <color name="headTable_orange">#F9CB9C</color>
+    <color name="iconTable_red">#CC0000</color>
+    <color name="iconBackTable_yellow">#FFFF00</color>
+    <color name="iconArrow_yellow">#F1C232</color>
+    <color name="box_grey">#666666</color>
+    <color name="items_home_grey">#525252</color>
+</resources>

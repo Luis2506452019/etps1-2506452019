@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clases.OfertaFragment">
+
+    <LinearLayout
+        android:id="@+id/containerOferta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TableLayout
+            android:id="@+id/layoutOfertaEncabezado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txtGasolinera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/tituloOferta"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/icon_ubicacion"
+                    android:textSize="20dp"
+                    android:drawableTint="@color/white"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/imagenIconUNO"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/uno_icon" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txtObten20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/obten20"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                        <Button
+                            android:id="@+id/btnRegistraCupon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/registraCupon"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </TableRow>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutOfertaEncabezado"
+            android:layout_marginTop="55dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtMasOferta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/masOferta"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+            <View
+                android:id="@+id/lineaSeparadora"
+                android:layout_width="295dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imagenIconPuma"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/puma_icon" />
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/imagenIconTexaco"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/texaco_icon" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
