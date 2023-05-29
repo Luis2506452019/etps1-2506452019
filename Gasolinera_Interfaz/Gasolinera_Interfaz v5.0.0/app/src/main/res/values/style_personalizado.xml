@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/yellow</item>
+    </style>
+    <style name="BottomStyle">
+        <item name="android:background">@color/background_grey</item>
+        <item name="itemBackground">@drawable/dis_bottom_selector</item>
+        <item name="itemIconTint">@color/yellow</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
+</resources>

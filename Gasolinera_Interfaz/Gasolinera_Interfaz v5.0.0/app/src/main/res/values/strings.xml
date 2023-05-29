@@ -1,0 +1,101 @@
+<resources>
+    <!-- App Nombre -->
+    <string name="app_name">Gasolineras</string>
+
+    <!-- Menu -->
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_estacion">Estaciones</string>
+    <string name="menu_ubicacion">Ubicaciones</string>
+    <string name="menu_horario">Horarios</string>
+    <string name="menu_oferta">Ofertas</string>
+    <string name="menu_user">Usuario</string>
+
+    <!-- Login -->
+    <string name="txtHintMail">E-MAIL</string>
+    <string name="txtHintPass">PASSWORD</string>
+    <string name="txtCrearCuenta">¿No tienes una cuenta?</string>
+    <string name="txtReg"><u>Registrarse</u></string>
+
+    <!-- Registrar -->
+    <string name="txtHintNombre">NOMBRE COMPLETO</string>
+    <string name="txtHintConfPass">CONFIRMAR PASSWORD</string>
+    <string name="txtTenerCuenta">¿Ya tienes una cuenta?</string>
+    <string name="txtIniciar"><u>Iniciar Sesión</u></string>
+
+    <!-- Botones -->
+    <string name="btnLog"><font color="@color/black">INGRESAR</font></string>
+    <string name="btnReg"><font color="@color/black">REGISTRARSE</font></string>
+    <string name="btnAdd"><font color="@color/black">AGREGAR</font></string>
+    <string name="btnEdit"><font color="@color/black">EDITAR</font></string>
+    <string name="btnDelete"><font color="@color/black">ELIMINAR</font></string>
+    <string name="btnSearch"><font color="@color/black">BUSCAR</font></string>
+
+    <!-- Inicio -->
+    <string name="holaInicio"><b>¡Hola!</b></string>
+    <string name="bienvenidoInicio">Bienvenido a tu app de confianza.</string>
+    <string name="fraseInicio">El único modo de hacer un gran trabajo es amar lo que haces.</string>
+    <string name="autorInicio">- Steve Jobs</string>
+
+    <!-- Estacion Array & Hint -->
+    <string-array name="nombreEstacion_array">
+        <item>SELECCIONAR...</item>
+        <item>PUMA</item>
+        <item>TEXACO</item>
+        <item>UNO</item>
+    </string-array>
+    <string name="txtHintNombreSucursal">Nombre Sucursal</string>
+    <string name="txtHintUbicacionSucursal">Ubicación Sucursal</string>
+    <string name="txtHintPreDiesel">Precio Diesel</string>
+    <string name="txtHintPreRegular">Precio Regular</string>
+    <string name="txtHintPreEspecial">Precio Especial</string>
+
+    <!-- Estacion Detalle-->
+    <string name="nomEstacion">Nombre Gasolinera</string>
+    <string name="nomUbiEstacion">Ubicación:</string>
+    <string name="ubiEstacion">Ubicacion Gasolinera</string>
+    <string name="tipEstacion">Tipo:</string>
+    <string name="preEstacion">Precio:</string>
+    <string name="diEstacion">Diesel</string>
+    <string name="reEstacion">Regular</string>
+    <string name="esEstacion">Especial</string>
+
+    <!-- Ubicaciones -->
+    <string name="tituloUbicacion"><b>Nuestras Ubicaciones</b></string>
+    <string name="mapaUbicacion"><b><u>Mapa</u></b></string>
+    <string name="listaUbicacion"><b>Lista</b></string>
+
+    <!-- Ofertas -->
+    <string name="tituloOferta">Gasolineras UNO</string>
+    <string name="obten20">Obten el 20% \n en tu siguiente recarga</string>
+    <string name="registraCupon">REGISTRA TU CUPÓN</string>
+    <string name="masOferta">Más ofertas</string>
+
+    <!-- Horarios -->
+    <string name="tituloHorario"><font color="@color/white">HORARIOS</font></string>
+    <string name="subtituloHorario"><font color="@color/white">Sucursales</font></string>
+    <string name="telefonoHorario"><font color="@color/white">+(503) 2534 - 5433</font></string>
+    <string name="regularHorario"><font color="@color/white">Regular</font></string>
+    <string name="especialHorario"><font color="@color/white">Especial</font></string>
+    <string name="dieselHorario"><font color="@color/white">Diesel</font></string>
+    <string-array name="gasolinera_array">
+        <item>Gasolinera X</item>
+        <item>Gasolinera UNO</item>
+        <item>Gasolinera PUMA</item>
+        <item>Gasolinera TEXACO</item>
+    </string-array>
+
+    <!-- Horarios Tabla -->
+    <string name="headTitle0"><b><font color="@color/black">Gasolinera</font></b></string>
+    <string name="headTitle1"><font color="@color/black">Hora</font></string>
+    <string name="headTitle2"><font color="@color/black">Lun</font></string>
+    <string name="headTitle3"><font color="@color/black">Mar</font></string>
+    <string name="headTitle4"><font color="@color/black">Mié</font></string>
+    <string name="headTitle5"><font color="@color/black">Jue</font></string>
+    <string name="headTitle6"><font color="@color/black">Vie</font></string>
+    <string name="headTitle7"><font color="@color/black">Sáb</font></string>
+    <string name="headTitle8"><font color="@color/black">Dom</font></string>
+    <string name="bodyRow1"><font color="@color/black">5:00 -\n12:00</font></string>
+    <string name="bodyRow2"><font color="@color/black">1:30 -\n10:00</font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

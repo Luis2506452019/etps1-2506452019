@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_clases.MantenimientoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@color/headTable_grey"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <EditText
+                android:id="@+id/edtNombreSucursal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:hint="@string/txtHintNombreSucursal"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/icon_search"
+                android:text="@string/btnSearch"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:singleLine="true" />
+        </TableRow>
+
+        <Spinner
+            android:id="@+id/spnNombreEstacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/edtUbicacionSucursal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="@string/txtHintUbicacionSucursal"
+            android:inputType="textLongMessage|textMultiLine|text"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/edtTipoDiesel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="@string/txtHintPreDiesel"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/edtTipoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="@string/txtHintPreRegular"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/edtTipoEspecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:hint="@string/txtHintPreEspecial"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:drawableTop="@drawable/icon_save"
+                android:text="@string/btnAdd"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:drawableTop="@drawable/icon_edit"
+                android:text="@string/btnEdit"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:drawableTop="@drawable/icon_delete"
+                android:text="@string/btnDelete"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:singleLine="true"/>
+        </TableRow>
+
+    </LinearLayout>
+
+</FrameLayout>
