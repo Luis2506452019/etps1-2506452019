@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // CREACION DE TOOLBAR PERSONALIZADO
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // CREANDO DRAWELAYOUT
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
@@ -41,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         BottomNavigationView bottom_nav_view = findViewById(R.id.bottom_navigation);
+        NavigationUI.setupWithNavController(bottom_nav_view, navController);
 
+        // OCULTAR BOTTOM NAVIGATION VIEW EN CIERTOS FRAGMENTS
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller,
@@ -62,18 +66,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        NavigationUI.setupWithNavController(bottom_nav_view, navController);
     }
 
-    //Creacion de Option Menu
+    // CREACION DE OPTION MENU
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.nav_main, menu);
         return true;
     }
 
-    // Gestionamos la navegación del Option Menu
+    // GESTIONAMOS LA NAVEGACIÓN DEL OPTION MENU
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         NavController navController = Navigation.findNavController(this, R.id.contenedorFragments);

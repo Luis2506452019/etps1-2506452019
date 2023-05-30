@@ -23,7 +23,7 @@ public class EstacionDetalleFragment extends Fragment {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_estacion_detalle, container, false);
 
-        //OBTENIENDO IDENTIFICADORES
+        // OBTENIENDO IDENTIFICADORES
         TextView txtGasolineraEstacion = vista.findViewById(R.id.tituloDetalleEstacion);
         ImageView imgListEstacion = vista.findViewById(R.id.imagenDetalleEstacion);
         TextView txtUbicacionEstacion = vista.findViewById(R.id.ubicacionDetalleEstacion);
@@ -31,7 +31,7 @@ public class EstacionDetalleFragment extends Fragment {
         TextView txtPrecioEstacion2 = vista.findViewById(R.id.precioEstacion2);
         TextView txtPrecioEstacion3 = vista.findViewById(R.id.precioEstacion3);
 
-        //RECUPERAMOS DATOS A TRAVES DE BUNDLE
+        // RECUPERAMOS DATOS A TRAVÉS DE BUNDLE
         Bundle datosRecuperados = getArguments();
         String imgGasolinera = datosRecuperados.getString("imgGasolinera");
         String nomGasolinera = datosRecuperados.getString("nombreGasolineraSucursal");
@@ -41,7 +41,7 @@ public class EstacionDetalleFragment extends Fragment {
         String precioEspecial = datosRecuperados.getString("precioEspecial");
 
 
-        // Utilizamos la función equals() para comparar strings y dependiendo la condicion mostrar la imagen correspondiente de la gasolinera
+        // UTILIZAMOS LA FUNCIÓN EQUALS() PARA COMPARAR STRINGS Y DEPENDIENDO LA CONDICIÓN MOSTRAR LA IMAGEN CORRESPONDIENTE DE LA GASOLINERA
         if (imgGasolinera.equals("PUMA")){
             imgListEstacion.setImageResource(R.drawable.estacion_puma);
         } else if (imgGasolinera.equals("UNO")){

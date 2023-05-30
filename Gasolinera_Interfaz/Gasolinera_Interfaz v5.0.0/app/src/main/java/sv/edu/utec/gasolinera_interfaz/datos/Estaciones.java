@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import sv.edu.utec.gasolinera_interfaz.database.BaseHelper;
 import sv.edu.utec.gasolinera_interfaz.entidades.EntEstaciones;
@@ -109,7 +110,11 @@ public class Estaciones extends BaseHelper {
             }
             while (cursorEstacion.moveToNext());
         }
+
+        //CERRAMOS CONEXION
         cursorEstacion.close();
+        bd.close();
+
         return listaEstaciones;
     }
     // FIN ------->

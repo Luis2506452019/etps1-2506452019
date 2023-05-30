@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
-        tools:listitem="@layout/elemento_listview_opcion_personalizado"/>
+        tools:listitem="@layout/elemento_recyclerview_personalizado"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
         android:src="@drawable/icon_btn_add"
-        android:backgroundTint="@color/yellow" />
+        android:backgroundTint="@color/yellow"
+        app:tint="@color/black" />
 
 </FrameLayout>
