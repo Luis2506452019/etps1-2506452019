@@ -69,7 +69,7 @@ public class MantenimientoFragment extends Fragment {
         // Llenando Spinner
         spnNomEsta.setAdapter(adapter);
 
-        // Evento para Opciones con Toast
+        // Evento para Opciones de Spinner
         spnNomEsta.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -99,7 +99,7 @@ public class MantenimientoFragment extends Fragment {
                 if(!nom.isEmpty()){
                     Cursor cursor = db.rawQuery("SELECT * FROM estaciones WHERE nomb_sucursal = '"+nom+"'",null);
                     if (cursor.moveToFirst()){
-                        spnNomEsta.setSelection(cursor.getInt(2));
+                        spnNomEsta.setSelection(cursor.getInt(1));
                         ubiSucu.setText(cursor.getString(3));
                         preDies.setText(cursor.getString(4));
                         preRegu.setText(cursor.getString(5));

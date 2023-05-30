@@ -92,7 +92,7 @@ public class Estaciones extends BaseHelper {
         EntEstaciones entEstaciones = null;
         Cursor cursorEstacion;
 
-        cursorEstacion=bd.rawQuery("SELECT "+COL_NomGas+", "+COL_NomSuc+", "+COL_UbiSuc+", "+COL_tipDie+", "+COL_tipReg+", "+COL_tipEsp+" FROM "+TABLE_ST+" ORDER BY "+COL_NomGas, null);
+        cursorEstacion=bd.rawQuery("SELECT "+COL_NomGas+", "+COL_NomSuc+", "+COL_UbiSuc+", "+COL_tipDie+", "+COL_tipReg+", "+COL_tipEsp+" FROM "+TABLE_ST+" ORDER BY "+COL_NomGas,  null);
 
         if (cursorEstacion.moveToFirst()){
             do {
