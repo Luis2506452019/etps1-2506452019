@@ -1,17 +1,10 @@
 package sv.edu.utec.gasolinera_interfaz.database;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-
-import java.util.ArrayList;
-
-import sv.edu.utec.gasolinera_interfaz.entidades.EntEstaciones;
 
 public class BaseHelper extends SQLiteOpenHelper {
     private static final int VERSION_BASEDATOS = 2;
@@ -72,16 +65,6 @@ public class BaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ST);
 
         onCreate(db);
-    }
-
-    //------- Eliminar Estaciones
-    public void deleteEstaciones(String nombre){
-        this.getWritableDatabase().delete(TABLE_ST, "nomb_gasolinera='"+nombre+"'", null);
-    }
-
-    //------- Actualizar Estaciones
-    public void updateEstaciones (String new_nombre, String old_nombre){
-        this.getWritableDatabase().execSQL("UPDATE "+TABLE_ST+" SET nombregasolinera='"+new_nombre+"' WHERE nombregasolinera='"+old_nombre+"'");
     }
 
 }

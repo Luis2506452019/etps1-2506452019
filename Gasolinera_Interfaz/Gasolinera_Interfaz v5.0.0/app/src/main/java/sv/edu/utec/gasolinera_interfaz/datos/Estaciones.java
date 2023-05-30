@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -112,36 +111,6 @@ public class Estaciones extends BaseHelper {
         }
         cursorEstacion.close();
         return listaEstaciones;
-    }
-    // FIN ------->
-
-    //------- INICIO -------> || Buscar Estaciones || <-------
-    public long buscarEstacio(String query){
-        BaseHelper baseHelper = new BaseHelper(context);
-        SQLiteDatabase bd = baseHelper.getWritableDatabase();
-
-        String SelectQuery = "SELECT * FROM "+TABLE_ST+" WHERE = "+COL_NomSuc+" = "+query+" ";
-
-        EntEstaciones entEstaciones = null;
-        Cursor cursorEstacion;
-
-        cursorEstacion=bd.rawQuery(SelectQuery, null);
-
-        if (cursorEstacion.moveToFirst()){
-            do {
-                entEstaciones = new EntEstaciones();
-
-                entEstaciones.setNomb_gasolinera(cursorEstacion.getString(1));
-                entEstaciones.setNomb_sucursal(cursorEstacion.getString(2));
-                entEstaciones.setUbi_sucursal(cursorEstacion.getString(3));
-                entEstaciones.setTipo_diesel(cursorEstacion.getString(4));
-                entEstaciones.setTipo_regular(cursorEstacion.getString(5));
-                entEstaciones.setTipo_especial(cursorEstacion.getString(6));
-            }
-            while (cursorEstacion.moveToNext());
-        }
-        cursorEstacion.close();
-        return 0;
     }
     // FIN ------->
 

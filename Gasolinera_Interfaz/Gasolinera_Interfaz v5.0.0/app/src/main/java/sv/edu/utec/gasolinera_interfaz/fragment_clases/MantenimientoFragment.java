@@ -1,9 +1,5 @@
 package sv.edu.utec.gasolinera_interfaz.fragment_clases;
 
-import static sv.edu.utec.gasolinera_interfaz.database.BaseHelper.COL_NomGas;
-import static sv.edu.utec.gasolinera_interfaz.database.BaseHelper.COL_NomSuc;
-import static sv.edu.utec.gasolinera_interfaz.database.BaseHelper.TABLE_ST;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -27,7 +23,7 @@ import sv.edu.utec.gasolinera_interfaz.R;
 import sv.edu.utec.gasolinera_interfaz.datos.Estaciones;
 
 public class MantenimientoFragment extends Fragment {
-    BaseHelper admin;
+    BaseHelper controller;
     Spinner spnNomEsta;
     String nGasolinera;
     EditText nomSucu, ubiSucu, preDies, preRegu, preEspe;
@@ -51,7 +47,7 @@ public class MantenimientoFragment extends Fragment {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_mantenimiento, container, false);
 
-        admin = new BaseHelper(getActivity());
+        controller = new BaseHelper(getActivity());
 
         spnNomEsta = (Spinner) vista.findViewById(R.id.spnNombreEstacion);
         nomSucu = (EditText) vista.findViewById(R.id.edtNombreSucursal);
@@ -96,7 +92,24 @@ public class MantenimientoFragment extends Fragment {
         btBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Estaciones baseEst = new Estaciones(context);
+
+                SQLiteDatabase db = controller.getWritableDatabase();
+                String nom = nomSucu.getText().toString();
+
+                if(!nom.isEmpty()){
+                    Cursor cursor = db.rawQuery("SELECT * FROM estaciones WHERE nomb_sucursal = '"+nom+"'",null);
+                    if (cursor.moveToFirst()){
+                        spnNomEsta.setSelection(cursor.getInt(2));
+                        ubiSucu.setText(cursor.getString(3));
+                        preDies.setText(cursor.getString(4));
+                        preRegu.setText(cursor.getString(5));
+                        preEspe.setText(cursor.getString(6));
+                    }else {
+                        Toast.makeText(context, "No existe registro", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(context, "Rellene campo para buscar", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -135,10 +148,10 @@ public class MantenimientoFragment extends Fragment {
                     Toast.makeText(context, "Rellene todos los campos", Toast.LENGTH_LONG).show();
 
                 } else {
-                    long codisave = baseEst.updateEstacion(nGasolinera, nomSucu.getText().toString(), ubiSucu.getText().toString(),
+                    long codiupdate = baseEst.updateEstacion(nGasolinera, nomSucu.getText().toString(), ubiSucu.getText().toString(),
                             preDies.getText().toString(), preRegu.getText().toString(), preEspe.getText().toString());
 
-                    if(codisave>0){
+                    if(codiupdate>0){
                         Toast.makeText(getActivity().getApplicationContext(),"Registro actualizado",Toast.LENGTH_LONG).show();
                         limpiar();
                     } else {
