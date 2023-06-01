@@ -23,6 +23,7 @@ import sv.edu.utec.gasolinera_interfaz.datos.Estaciones;
 
 public class MantenimientoFragment extends Fragment {
     Spinner spnNomEsta;
+    String nomOld;
     EditText nomSucu, ubiSucu, preDies, preRegu, preEspe;
     Button btBuscar, btGuardar, btEditar, btEliminar;
 
@@ -93,16 +94,18 @@ public class MantenimientoFragment extends Fragment {
                                 spnNomEsta.setSelection(3);
                                 break;
                         }
+                        // ALMACENAMOS EL "NOMBRE DE SUCURSAL" EN UNA VARIABLE STRING POR SI SE QUIERE ACTUALIZAR
+                        nomOld = cursor.getString(2);
                         ubiSucu.setText(cursor.getString(3));
                         preDies.setText(cursor.getString(4));
                         preRegu.setText(cursor.getString(5));
                         preEspe.setText(cursor.getString(6));
                         cursor.close();
                     }else {
-                        Toast.makeText(context, "No existe registro", Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "No existe registro", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(context, "Rellene campo \"Sucursal\" para buscar", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Rellene campo \"Sucursal\" para buscar", Toast.LENGTH_SHORT).show();
                 }
                 db.close();
             }
@@ -125,10 +128,10 @@ public class MantenimientoFragment extends Fragment {
                             preDies.getText().toString(), preRegu.getText().toString(), preEspe.getText().toString());
 
                     if(codisave>0){
-                        Toast.makeText(getActivity().getApplicationContext(),"Registro insertado",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(),"Registro insertado",Toast.LENGTH_SHORT).show();
                         limpiar();
                     } else {
-                        Toast.makeText(getActivity().getApplicationContext(),"Error al insertar",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(),"Error al insertar",Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -148,14 +151,14 @@ public class MantenimientoFragment extends Fragment {
                     Toast.makeText(context, "Rellene todos los campos", Toast.LENGTH_LONG).show();
                 } else {
                     // EJECUTANDO CONSULTA PARA ACTUALIZAR
-                    long codiupdate = baseEst.updateEstacion(spnNomEsta.getSelectedItem().toString(), nomSucu.getText().toString(), ubiSucu.getText().toString(),
+                    long codiupdate = baseEst.updateEstacion(spnNomEsta.getSelectedItem().toString(), nomOld, nomSucu.getText().toString(), ubiSucu.getText().toString(),
                             preDies.getText().toString(), preRegu.getText().toString(), preEspe.getText().toString());
 
                     if(codiupdate>0){
-                        Toast.makeText(getActivity().getApplicationContext(),"Registro actualizado",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(),"Registro actualizado",Toast.LENGTH_SHORT).show();
                         limpiar();
                     } else {
-                        Toast.makeText(getActivity().getApplicationContext(),"Error al actualizar",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(),"Error al actualizar",Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -176,10 +179,10 @@ public class MantenimientoFragment extends Fragment {
                     long codidelete = baseEst.deleteEstacion(nomSucu.getText().toString());
 
                     if(codidelete>0){
-                        Toast.makeText(getActivity().getApplicationContext(),"Registro eliminado",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(),"Registro eliminado",Toast.LENGTH_SHORT).show();
                         limpiar();
                     } else {
-                        Toast.makeText(getActivity().getApplicationContext(),"Error al eliminar",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(),"Error al eliminar",Toast.LENGTH_SHORT).show();
                     }
                 }
             }

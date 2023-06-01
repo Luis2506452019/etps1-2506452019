@@ -50,7 +50,7 @@ public class Estaciones extends BaseHelper {
     // FIN ------->
 
     //------- INICIO -------> || Actualizacion de Estaciones || <-------
-    public long updateEstacion(String nom_gas, String nom_suc, String ubi_suc, String tip_die, String tip_reg, String tip_esp){
+    public long updateEstacion(String nom_gas, String old_nom_suc, String new_nom_suc, String ubi_suc, String tip_die, String tip_reg, String tip_esp){
         long codigo = 0;
 
         try {
@@ -59,13 +59,13 @@ public class Estaciones extends BaseHelper {
 
             ContentValues contentValues = new ContentValues();
             contentValues.put(COL_NomGas, nom_gas);
-            contentValues.put(COL_NomSuc, nom_suc);
+            contentValues.put(COL_NomSuc, new_nom_suc);
             contentValues.put(COL_UbiSuc, ubi_suc);
             contentValues.put(COL_tipDie, tip_die);
             contentValues.put(COL_tipReg, tip_reg);
             contentValues.put(COL_tipEsp, tip_esp);
 
-            codigo= bd.update(TABLE_ST, contentValues, COL_NomSuc+"=?", new String[]{nom_suc});
+            codigo= bd.update(TABLE_ST, contentValues, COL_NomSuc+"=?", new String[]{old_nom_suc});
             return codigo;
         }
         catch (Exception ex){

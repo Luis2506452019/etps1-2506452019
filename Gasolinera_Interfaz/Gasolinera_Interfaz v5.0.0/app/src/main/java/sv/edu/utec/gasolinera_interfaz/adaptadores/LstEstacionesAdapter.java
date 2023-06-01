@@ -90,10 +90,12 @@ public class LstEstacionesAdapter extends RecyclerView.Adapter<LstEstacionesAdap
                 // CONDICIONALES SI SE CUMPLE O NO LA ACCION
                 if(codidelete>0){
                     // NOTIFICAMOS AL RECYCLERVIEW PARA QUE ACTUALICE LA VISTA
+                    listaestacion.remove(modPos);
                     notifyItemRemoved (modPos);
-                    Toast.makeText(view.getContext().getApplicationContext(),"Registro eliminado",Toast.LENGTH_LONG).show();
+                    notifyItemRangeChanged(modPos, listaestacion.size());
+                    Toast.makeText(view.getContext().getApplicationContext(),"Registro eliminado",Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(view.getContext().getApplicationContext(),"Error al eliminar",Toast.LENGTH_LONG).show();
+                    Toast.makeText(view.getContext().getApplicationContext(),"Error al eliminar",Toast.LENGTH_SHORT).show();
                 }
             }
         });
